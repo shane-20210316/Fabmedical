@@ -3,6 +3,10 @@ const http = require('http');
 const path = require('path');
 const request = require('request');
 
+const appInsights = require("applicationinsights");
+appInsights.setup("2d43f260-e43c-4e25-97b6-8615f2b7c208");
+appInsights.start();
+
 const app = express();
 
 app.use(express.static(path.join(__dirname, 'dist/content-web')));
